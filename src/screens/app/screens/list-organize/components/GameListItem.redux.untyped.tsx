@@ -18,7 +18,7 @@ type Props = OwnProps & StateProps & Required<DispatchProp<State>>
 export const GameListItem = (props: Props) =>
     <div />
 
-const mapStateToProps = (state: State, ownProps: OwnProps) => {
+const mapStateToProps = (state: State, ownProps: OwnProps): StateProps => {
     // ...
     return {
         image: "/image.png",
