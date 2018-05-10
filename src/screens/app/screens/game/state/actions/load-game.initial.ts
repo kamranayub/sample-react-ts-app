@@ -1,4 +1,4 @@
-import { actionCreator, Action } from "~/state/actions";
+import { Action } from "~/state/actions";
 
 export interface LoadGameAction extends Action<typeof loadGameAction> {
   id: number;
@@ -6,4 +6,3 @@ export interface LoadGameAction extends Action<typeof loadGameAction> {
 }
 
 export const loadGameAction = "game/load";
-export const loadGame = actionCreator<LoadGameAction>(loadGameAction);
