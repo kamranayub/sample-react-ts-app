@@ -5,20 +5,23 @@ import { ReduxComponent } from "~/state/components";
 import { fetchGame } from "./state/actions";
 
 interface OwnProps {
-    id: number;
+  id: number;
 }
 
 class GameDetails extends ReduxComponent<{}, OwnProps> {
-    
-    componentDidMount() {
-        const { id, dispatch } = this.props;
+  componentDidMount() {
+    const { id, dispatch } = this.props;
 
-        dispatch(fetchGame(id))
-    }
+    dispatch(fetchGame(id));
+  }
 
-    render() {
-        return <div><Icon /> Game Details for {this.props.id}</div>;
-    }
+  render() {
+    return (
+      <div>
+        <Icon /> Game Details for {this.props.id}
+      </div>
+    );
+  }
 }
 
-export default connect()(GameDetails)
+export default connect()(GameDetails);
