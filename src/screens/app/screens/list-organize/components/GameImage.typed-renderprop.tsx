@@ -1,9 +1,12 @@
 import * as React from "react";
 
+type RenderProp<T> = 
+    (props: T) => React.ReactNode;
+
 interface Props {
   name: string;
   imageUrl: string;
-  children: (props: RenderProps) => React.ReactNode;
+  children: RenderProp<RenderProps>;
 }
 
 interface RenderProps {
