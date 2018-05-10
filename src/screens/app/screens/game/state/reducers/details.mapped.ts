@@ -1,12 +1,12 @@
 import { createReducerActions, ReducerActions } from "~/state/reducer";
 import initialState from "../";
-import { loadGameAction, LoadGameAction, SaveGameAction } from "../actions";
+import { LOAD_GAME, LoadGameAction, SaveGameAction } from "../actions";
 
 type GameAction = LoadGameAction | SaveGameAction
 type State = typeof initialState.details;
 
 const actions: ReducerActions<State, GameAction> = {
-  [loadGameAction]: loadGame
+  [LOAD_GAME]: loadGame
 }
 
 function loadGame(state: State, action: LoadGameAction) {

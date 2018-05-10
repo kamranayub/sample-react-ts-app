@@ -1,8 +1,9 @@
 import { Action, actionCreator } from "state/actions";
 
-export interface SaveGameAction extends Action<typeof saveGameAction> {
+export const SAVE_GAME = "game/save";
+
+export interface SaveGameAction extends Action<typeof SAVE_GAME> {
     id: number
 }
 
-export const saveGameAction = "game/save";
-export const saveGame = actionCreator<SaveGameAction>(saveGameAction);
+export const saveGame = actionCreator<SaveGameAction>(SAVE_GAME);

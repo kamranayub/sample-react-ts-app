@@ -1,8 +1,8 @@
 import { Action } from "~/state/actions";
 
-export interface LoadGameAction extends Action<typeof loadGameAction> {
+export const LOAD_GAME = "game/load";
+
+export interface LoadGameAction extends Action<typeof LOAD_GAME> {
   id: number;
   game: object;
 }
-
-export const loadGameAction = "game/load";
