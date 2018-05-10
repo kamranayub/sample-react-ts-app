@@ -1,7 +1,7 @@
 import * as React from "react";
 
-type RenderProp<T> = 
-    (props: T) => React.ReactNode;
+type RenderProp<TProps> = 
+    (props: TProps) => React.ReactNode;
 
 interface Props {
   name: string;
