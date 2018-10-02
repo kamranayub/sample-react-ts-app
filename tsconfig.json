@@ -19,7 +19,7 @@
     "baseUrl": "src",
     "paths": {
       "~/*": ["*"],
-      "shared/*": ["screens/app/shared/*"]
+      "shared/*": ["screens/app/shared/*", "screens/app/screens/game/shared/*"]
     }
   },
   "exclude": [
