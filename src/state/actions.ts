@@ -1,6 +1,11 @@
 import { Omit } from "~/type-utils";
 
 export interface Action<Type = string> { type: Type };
+
+
+
+
+
 export type ActionPayload<TAction extends Action> = Omit<
   TAction,
   "type"

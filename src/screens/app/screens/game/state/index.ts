@@ -1,10 +1,10 @@
-interface State {
+interface GameState {
   details: {
     id: number;
     game: object | null;
   };
 }
-const state: State = {
+const state: GameState = {
   details: {
     game: null,
     id: 0,

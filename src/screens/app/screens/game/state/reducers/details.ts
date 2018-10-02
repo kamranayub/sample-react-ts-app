@@ -1,4 +1,4 @@
-import { loadGameAction, LoadGameAction, SaveGameAction } from "../actions";
+import { LOAD_GAME, LoadGameAction, SaveGameAction } from "../actions";
 import initialState from "../";
 
 type GameAction = LoadGameAction | SaveGameAction;
@@ -8,7 +8,7 @@ export default function(
   action: GameAction
 ): typeof initialState.details {
   switch (action.type) {
-    case loadGameAction: {
+    case LOAD_GAME: {
       const { id, game } = action;
       return { ...state, id, game };
     }
