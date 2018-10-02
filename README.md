@@ -1,7 +1,15 @@
+# Scalable & Maintainable Apps with React and TypeScript Sample
+
 Goes along with:
 
 - https://bit.ly/ndcmn-react-ts
 - https://bit.ly/mdc-react-ts-2018
+
+## Notes on Testing
+
+I use the `RecursivePartial<T>` helper a lot to write tests for Redux. It allows you to mock out state partially while still maintaining type safety.
+
+See example in `src/screens/app/screens/game/state/reducers/__tests__/details.ts`
 
 ## Notes on Module Resolution
 
