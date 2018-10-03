@@ -19,7 +19,7 @@ export function __loadGame(payload: ActionPayload<LoadGameAction>) {
 
 export const fetchGame = (id: number) => {
   return async (dispatch: Dispatch<State>) => {
-    const response = await fetch(`https://xkcd.com/info.${id}.json`);
+    const response = await fetch(`/manifest.json`);
     const result = await response.json();
 
     dispatch(loadGame({ id, game: result }));
