@@ -18,7 +18,7 @@
     "noUnusedLocals": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
+      "~/*": ["src/*"]
       // This doesn't really work with Jest/Webpack because
       // semantics are different than `moduleDirectories`
       // but leaving here for illustration
