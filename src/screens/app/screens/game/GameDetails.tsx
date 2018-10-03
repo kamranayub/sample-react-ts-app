@@ -1,8 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { ReduxComponent } from "~/state/components";
-import Icon from "shared/Icon"; // :( not the right shared component!
-import SharedGameComponent from "shared/GameShared";
+import Icon from "~/screens/app/shared/components/Icon";
+import GameIcon from "./shared/components/Icon";
 import { fetchGame } from "./state/actions";
 
 interface OwnProps {
@@ -19,7 +19,7 @@ class GameDetails extends ReduxComponent<{}, OwnProps> {
   render() {
     return (
       <div>
-        <Icon /> Game Details for {this.props.id} <SharedGameComponent />
+        <Icon /> Game Details for {this.props.id} <GameIcon />
       </div>
     );
   }

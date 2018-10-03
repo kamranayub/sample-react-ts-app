@@ -1,4 +1,4 @@
-import { Action, actionCreator } from "state/actions";
+import { Action, actionCreator } from "~/state/actions";
 
 export const SAVE_GAME = "game/save";
 

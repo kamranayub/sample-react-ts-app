@@ -24,6 +24,6 @@ describe("details reducer", () => {
       type: LOAD_GAME
     });
 
-    expect(result).not.toBeNull();
+    expect(result.id).toBe(5);
   });
 });

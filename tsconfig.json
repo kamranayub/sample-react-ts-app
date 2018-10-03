@@ -16,10 +16,13 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["*"],
-      "shared/*": ["screens/app/shared/*", "screens/app/screens/game/shared/*"]
+      "~/*": ["src/*"],
+      // This doesn't really work with Jest/Webpack because
+      // semantics are different than `moduleDirectories`
+      // but leaving here for illustration
+      // "shared/*": ["screens/app/shared/*", "screens/app/screens/game/shared/*"]
     }
   },
   "exclude": [

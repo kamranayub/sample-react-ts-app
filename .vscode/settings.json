@@ -1,3 +1,4 @@
 {
-  "workbench.colorTheme": "Material Theme Darker High Contrast"
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
