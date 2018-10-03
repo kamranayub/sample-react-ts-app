@@ -21,6 +21,7 @@ Instead, we've settled on just using absolute paths like `~/screens/app/screens/
 
 ## TODO
 
+- [ ] Add TOC of patterns/tips referenced in slides
 - [ ] Add back `moduleNameMapper` to package.json `jest` config once fixed in react-scripts-ts@4.x:
   - ```
     "jest": {
