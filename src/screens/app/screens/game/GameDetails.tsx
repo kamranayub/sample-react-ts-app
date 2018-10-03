@@ -53,6 +53,10 @@ export class GameDetails extends ReduxComponent<OwnProps, OwnState, DispatchProp
   }
 }
 
+//
+// Long-form way to avoid more type helpers to "unwrap" Thunk actions
+// See: https://gist.github.com/milankorsos/ffb9d32755db0304545f92b11f0e4beb
+// There's probably a better way I need to play with
 const mapDispatchToProps = (dispatch: Dispatch<State>): DispatchProps => ({
   loadGameById: (id: number) => dispatch(fetchGame(id))
 });
