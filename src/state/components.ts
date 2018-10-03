@@ -2,15 +2,18 @@ import * as React from "react";
 import { DispatchProp } from "react-redux";
 import { State } from ".";
 
-export type ReduxProps<TStateProps, TOwnProps = {}> = TStateProps &
-  TOwnProps;
+export type ReduxProps<
+  TOwnProps = {},
+  TStateProps = DispatchProp<State>
+> = TStateProps & TOwnProps;
 
-export type SRC<TStateProps, TOwnProps = {}> = React.StatelessComponent<
-  ReduxProps<TStateProps, TOwnProps>
->;
+export type SRC<
+  TOwnProps = {},
+  TStateProps = DispatchProp<State>
+> = React.StatelessComponent<ReduxProps<TStateProps, TOwnProps>>;
 
 export class ReduxComponent<
-  TStateProps = DispatchProp<State>,
   TOwnProps = {},
-  TState = {}
+  TState = {},
+  TStateProps = DispatchProp<State>
 > extends React.Component<ReduxProps<TStateProps, TOwnProps>, TState> {}

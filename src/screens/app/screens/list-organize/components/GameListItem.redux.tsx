@@ -4,26 +4,25 @@ import { State } from "~/state";
 import { SRC } from "~/state/components";
 
 interface OwnProps {
-    order: number;
-    onSelect: (id: number) => void;
+  order: number;
+  onSelect: (id: number) => void;
 }
 
 interface StateProps {
-    name: string;
-    image: string;
-    selected: boolean;
+  name: string;
+  image: string;
+  selected: boolean;
 }
 
-export const GameListItem: SRC<StateProps, OwnProps> = props =>
-    <div />
+export const GameListItem: SRC<OwnProps, StateProps> = props => <div />;
 
 const mapStateToProps = (state: State, ownProps: OwnProps) => {
-    // ...
-    return {
-        image: "/image.png",
-        name: "Skyrim",
-        selected: false
-    }
-}
+  // ...
+  return {
+    image: "/image.png",
+    name: "Skyrim",
+    selected: false
+  };
+};
 
 export default connect(mapStateToProps)(GameListItem);

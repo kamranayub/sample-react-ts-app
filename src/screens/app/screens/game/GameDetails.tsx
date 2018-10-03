@@ -21,7 +21,7 @@ interface DispatchProps {
 
 export type Props = DispatchProps & OwnProps;
 
-export class GameDetails extends ReduxComponent<DispatchProps, OwnProps, OwnState> {
+export class GameDetails extends ReduxComponent<OwnProps, OwnState, DispatchProps> {
   public state: OwnState = { loaded: false };
 
   public componentDidMount() {
