@@ -1,15 +1,20 @@
 import * as React from "react";
 
-type RenderProp<TProps> = 
-    (props: TProps) => React.ReactNode;
+type RenderProp<TRenderProps> = 
+    (props: TRenderProps) => React.ReactNode;
 
-interface Props {
-  name: string;
-  imageUrl: string;
-  children: RenderProp<RenderProps>;
+interface WithRenderProp<TRenderProps> {
+  children: RenderProp<TRenderProps>;
 }
 
-interface RenderProps {
+interface Props extends WithRenderProp<ImageProps> {
+  name: string;
+  imageUrl: string;
+  // Optionally, this works if you don't want to extend:
+  // children: RenderProp<ImageProps>
+}
+
+interface ImageProps {
   alt: string;
   title: string;
   src: string;
