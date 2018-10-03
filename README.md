@@ -19,9 +19,9 @@ Due to [this issue](https://github.com/Microsoft/TypeScript/issues/10649) we can
 
 Instead, we've settled on just using absolute paths like `~/screens/app/screens/game/shared/Component`
 
-## TODO for react-scripts-ts@4.0.8
+## TODO
 
-- [ ] Add back `moduleNameMapper` to package.json `jest` config once fixed:
+- [ ] Add back `moduleNameMapper` to package.json `jest` config once fixed in react-scripts-ts@4.x:
   - ```
     "jest": {
       "moduleNameMapper": {
@@ -29,3 +29,6 @@ Instead, we've settled on just using absolute paths like `~/screens/app/screens/
       }
     }
     ```
+- [ ] Show typing of `React.Component.defaultProps` and how that works
+- [ ] Better async dispatch typing/boilerplate
+- [ ] Show CSS-in-JS example (maybe with emotion)
