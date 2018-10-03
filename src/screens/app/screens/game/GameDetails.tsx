@@ -15,13 +15,13 @@ interface OwnState {
   loaded: boolean;
 }
 
-interface StateProps {
+interface DispatchProps {
   loadGameById: (id: number) => Promise<void>;
 }
 
-export type Props = StateProps & OwnProps;
+export type Props = DispatchProps & OwnProps;
 
-export class GameDetails extends ReduxComponent<StateProps, OwnProps, OwnState> {
+export class GameDetails extends ReduxComponent<DispatchProps, OwnProps, OwnState> {
   public state: OwnState = { loaded: false };
 
   public componentDidMount() {
@@ -53,7 +53,7 @@ export class GameDetails extends ReduxComponent<StateProps, OwnProps, OwnState> 
   }
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<State>): StateProps => ({
+const mapDispatchToProps = (dispatch: Dispatch<State>): DispatchProps => ({
   loadGameById: (id: number) => dispatch(fetchGame(id))
 });
 
