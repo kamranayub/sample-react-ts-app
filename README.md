@@ -4,8 +4,8 @@ Sample [create-react-app-typescript](https://github.com/wmonk/create-react-app-t
 
 Goes along with:
 
-- https://bit.ly/ndcmn-react-ts
-- https://bit.ly/mdc-react-ts-2018
+- https://bit.ly/ndcmn-react-ts (NDC MN 2018)
+- http://bit.ly/react-ts-mdc2018 (MDC 2018)
 
 ## Notes on Testing
 
