@@ -3,9 +3,9 @@ import * as React from "react";
 import mockStore from "~/state/mockStore";
 import ConnectedGameDetails, { GameDetails, Props } from "../GameDetails";
 import { LOAD_GAME } from "../state/actions";
+import { MockAction } from "~/type-utils";
 
 describe("game details - better", () => {
-
   // Set up a default props to spread
   // to minimize typing
   const defaultProps: Props = {
@@ -16,7 +16,11 @@ describe("game details - better", () => {
   };
 
   it("should load up with a game", done => {
-    const mockLoadGame = jest.fn(() => Promise.resolve(5));
+
+    // Use a handy type helper to strongly type our mock (if you want)
+    const mockLoadGame: MockAction<typeof defaultProps.loadGameById> = jest.fn(
+      (id: number) => Promise.resolve()
+    );
 
     // Test like a consumer would using a callback
     // if you truly care if a game was loaded
@@ -37,7 +41,6 @@ describe("game details - better", () => {
   });
 
   describe("when connected to Redux", () => {
-
     //
     // This is an example of a "kitchen sink"
     // test that will go through all the layers

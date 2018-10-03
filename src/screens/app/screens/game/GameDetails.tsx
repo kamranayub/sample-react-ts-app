@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect, Dispatch } from "react-redux";
-import { ReduxComponent } from "~/state/components";
+import { ReduxComponent, ReduxProps } from "~/state/components";
 import Icon from "~/screens/app/shared/components/Icon";
 import GameIcon from "./shared/components/Icon";
 import { fetchGame } from "./state/actions";
@@ -19,7 +19,8 @@ interface DispatchProps {
   loadGameById: (id: number) => Promise<void>;
 }
 
-export type Props = DispatchProps & OwnProps;
+// Export for tests using the ReduxProps helper
+export type Props = ReduxProps<OwnProps, DispatchProps>;
 
 export class GameDetails extends ReduxComponent<OwnProps, OwnState, DispatchProps> {
   public state: OwnState = { loaded: false };

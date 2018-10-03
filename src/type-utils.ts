@@ -11,3 +11,4 @@ export type RecursivePartial<T> = {
     ? Array<RecursivePartial<U>>
     : T[P] extends object ? RecursivePartial<T[P]> : T[P]
 };
+export type MockAction<TAction extends (...args: any[]) => any> = jest.Mock<ReturnType<TAction>>
